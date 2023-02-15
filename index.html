@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Skypad - powered by Skygear</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Skypad - powered by Skygear">
+    <meta property="og:description" content="Shared a pad on the real time collaborative notepad." />
+    <meta property="og:url" content="https://skygear-demo.github.io/skypad/">
+    <meta property="og:image" content="https://skygear-demo.github.io/skypad/skypad-og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@skygeario">
+    <meta name="twitter:title" content="Skypad - powered by Skygear">
+    <meta name="twitter:description" content="Shared a pad on the real time collaborative notepad.">
+    <meta name="twitter:image" content="https://skygear-demo.github.io/skypad/skypad-og-image.png">
+
+    <!-- load MUI -->
+    <link href="vendor/mui/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="vendor/mui/mui.min.js"></script>
+    <script src="vendor/skygear/polyfill.min.js"></script>
+    <script src="vendor/skygear/skygear.min.js"></script>
+    <!-- load code highlighter -->
+    <link rel="stylesheet" href="vendor/prism/prism.css">
+
+   <link rel="stylesheet" href="vendor/codeflask/codeflask.css">
+
+   <script src="vendor/prism/prism.js"></script>
+    <script src="vendor/codeflask/codeflask.js"></script>
+    codeflask
+
+  <!--Zepto-->
+  <script src="vendor/zepto/zepto.min.js"></script>
+
+    <link href="app.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <div id="skypad-title" contenteditable="true">
+    <input name="pad-title" type="input" value="// Skypad Loading..." placeholder="Enter note title" />
+  </div>
+  <div id="skypad-display"></div>
+  <div id="side-bar">
+    <h5>My notes</h5>
+    <ul id="note-list">
+    </ul>
+  </div>
+  <div id="share-bar"><a href="#" target="_blank" alt="Create new pad">[New]</a> | Share: <a id="share-url" target="_blank" href="{{note-url}}">[url]</a> <a id="share-twitter" target="_blank" href="http://twitter.com/share?text=I've created a pad using skypad!&url={{note-url}}&hashtags=skygear,skypad">[twitter]</a> <a id="share-fb" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{note-url}}">[facebook]</a><div id="credits">powered by <a target="_blank" href="https://skygear.io">[Skygear]</a> | Source on <a target="_blank" href="https://github.com/skygear-demo/skypad">[GitHub]</a> </div></div>
+  <div class="mui-dropdown code-highlight-selector">
+    <button class="mui-btn mui-btn--small mui-btn--flat mui-btn--primary" data-mui-toggle="dropdown">
+      <span id="code-highlight-caption">Code highlight</span>
+      <span class="mui-caret"></span>
+    </button>
+    <ul class="mui-dropdown__menu">
+      <li><a data-lang="None">None</a></li>
+      <li><a data-lang="JavaScript">JavaScript</a></li>
+      <li><a data-lang="HTML">HTML</a></li>
+      <li><a data-lang="CSS">CSS</a></li>
+      <li><a data-lang="clike">C</a></li>
+      
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+
+  </body>
+</html>
